@@ -1,5 +1,5 @@
 # Reviewproject - 강희원, 김도현, 원종혁, 백체은
-## [AirPlane-Ticketing Sysytem(Java & MySQL CODE)](https://github.com/Money1Kang/Miniproject2/tree/master)
+# [AirPlane-Ticketing Sysytem(Java & MySQL CODE)](https://github.com/Money1Kang/Miniproject2/tree/master)
 --> IN MASTER BRANCH
 
 # [Airplane-Ticketing(ERD)](https://app.diagrams.net/?libs=general;flowchart#HMoney1Kang%2FMiniproject2%2Fmain%2FAirplane-Ticketing(ERD)) - draw IO 활용
@@ -10,7 +10,7 @@
 
 =====================================================================================================
 
-# 220516 작업일지
+## 220516 작업일지
 -ERD 간단한 회의 뒤, EER 작업 착수
 -ERDCloud에서의 EXPORT 추출 실패로 MySQK Workbench로 EER 작업 재착수
  [EER - ErdCloud 작업중](https://www.erdcloud.com/d/yWaJWhivpzF5buTnb)
@@ -50,4 +50,4 @@ ORDER BY ticket_id ASC;
 
 ============================================================================================
 
-# 느낀점 - 설계의 깊이;;
+## 느낀점 - 설계의 깊이;;

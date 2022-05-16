@@ -13,6 +13,8 @@
 # 220516 작업일지
 -ERD 간단한 회의 뒤, EED 작업 착수
 -ERDCloud에서의 EXPORT 추출 실패로 MySQK Workbench로 EED 작업 재착수
+ [EED - ErdCloud 작업중](https://www.erdcloud.com/d/yWaJWhivpzF5buTnb)
+ 
 -팀원끼리의 업무량 조절로 간단한 기능구현과 간단한 리뷰형식의 프로젝트 방향설정
 -Todo(Step07 in Java)리스트와 비교하면서 클론코딩
 

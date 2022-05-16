@@ -22,13 +22,15 @@
 ## 고착점
 1.DB설계 부분에서 EER 키 값(참조키, 기본키)설정문제 - (1)참조키만 받는 테이블(Ticket)에 기본키 UN(Unsigned data type), AI(Auto Incremental) 키값 부분에 체크뒤 참조키 4개가 UN 키값체크가 안됨 / 해결방안 : Ticket 테이블에 인스턴스(id)를  만들어 PK설정 후 비식별자 관계설정-> 참조키에 UN설정이 가능해짐 
 (2) AI 키값은 PK받는부분에만 설정가능. 반면, 참조키는 값의 반환만 보여주는 식이라 AI(자동증가값) 키값 체크 불가
-![고착1](https://user-images.githubusercontent.com/100591948/168669238-2d452207-00a6-47c5-8297-1123874069c1.png)
 
-2.In JAVA - DB(MySQL)연동식. INSERT CODE 문제 - 설계 부문에서 데이터를 보여주는 테이블(Ticket)에서 참조키로 id 인스턴스만 받아서 데이터를 설정하는데서의 어려움 / (1) CMD에서 ticket 조회 시 id값만 나열![ticket CMD1](https://user-images.githubusercontent.com/100591948/168673311-7d150951-9a11-4a0d-91ee-ce0c68ce1410.png)
+ ![고착1](https://user-images.githubusercontent.com/100591948/168669238-2d452207-00a6-47c5-8297-1123874069c1.png)
+
+2.In JAVA - DB(MySQL)연동식. INSERT CODE 문제 - 설계 부문에서 데이터를 보여주는 테이블(Ticket)에서 참조키로 id 인스턴스만 받아서 데이터를 설정하는데서의 어려움 / (1) CMD에서 ticket 조회 시 id값만 나열
+ ![ticket CMD1](https://user-images.githubusercontent.com/100591948/168673311-7d150951-9a11-4a0d-91ee-ce0c68ce1410.png)
 
  / 해결방안 : SQL식에 JOIN써서 여러데이터 조회하는 방법 
 
- ![ticket CMD2](https://user-images.githubusercontent.com/100591948/168673904-fd614c8b-40c4-421f-b4a5-6895d6dbfca8.png)
+  ![ticket CMD2](https://user-images.githubusercontent.com/100591948/168673904-fd614c8b-40c4-421f-b4a5-6895d6dbfca8.png)
  
 ```
 <SQL-CMD>

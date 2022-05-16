@@ -2,10 +2,10 @@
 ## [AirPlane-Ticketing Sysytem(Java & MySQL CODE)](https://github.com/Money1Kang/Miniproject2/tree/master)
 --> IN MASTER BRANCH
 
-# [Airplane-Ticketing(ERD)](https://app.diagrams.net/?libs=general;flowchart#HMoney1Kang%2FMiniproject2%2Fmain%2FAirplane-Ticketing(ERD))
+# [Airplane-Ticketing(ERD)](https://app.diagrams.net/?libs=general;flowchart#HMoney1Kang%2FMiniproject2%2Fmain%2FAirplane-Ticketing(ERD)) - draw IO 활용
 ![image](https://user-images.githubusercontent.com/100591948/168666821-6ce95f46-3155-4082-9094-75ceb98eee4f.png)
 
-# Airplane-Ticketing(EER)
+# Airplane-Ticketing(EER) - MySQL Workbench 활용
 ![image](https://user-images.githubusercontent.com/100591948/168663262-f383d80c-4315-41cb-ba4d-3c1003171e9f.png)
 
 =====================================================================================================

@@ -1,4 +1,4 @@
-# Reviewproject - 강희원, 김도현, 원종혁, 백채은
+# Reviewproject - 강희원, 김도현, 원종혁, 백체은
 ## [AirPlane-Ticketing Sysytem(Java & MySQL CODE)](https://github.com/Money1Kang/Miniproject2/tree/master)
 --> IN MASTER BRANCH
 

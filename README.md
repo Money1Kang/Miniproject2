@@ -55,9 +55,12 @@ ORDER BY ticket_id ASC;
 
 - 백체은 : insert를 작성하려는 순간 테이블 구성이 잘못됐다는 생각이 들었다. 하지만 이제 와서 테이블부터 바꿀 수 없어서 최대한 해보려고 했다.
   insert를 join문으로 구성해봤는데 이런저런 런타임 예외를 처리하고 났더니 에러가 나지는 않는데 ticketView.errorPage();가 실행되길래 ticketService.save(newTicket);를 출력해봤더니 0이 나왔다. sql문장에 syntax 에러는 없는데 그럼 이 문장은 뭘하고 온 걸까. 
-  그래서 우선 입력한 값에 맞는 id값을 받은 다음에 그걸 다시 insert 문장의 value값에 넣기 위해 select 구문으로 각각의 테이블에서 id 값들을 받아오려고 했는데 column수가 일치하지 않는다며 에러가 났다. 그래서 ticket_id까지 넣어보긴 했는데 update가 아니고 insert를 하고 싶은 거라서 내가 임의로 ticket_id를 설정하는 게 맞나 싶었다. auto increment 설정을 해놨기 때문이다
+  그래서 우선 입력한 값에 맞는 id값을 받은 다음에 그걸 다시 insert 문장의 value값에 넣기 위해 select 구문으로 각각의 테이블에서 id 값들을 받아오려고 했는데 column수가 일치하지 않는다며 에러가 났다. 그래서 ticket_id까지 넣어보긴 했는데 update가 아니고 insert를 하고 싶은 거라서 내가 임의로 ticket_id를 설정하는 게 맞나 싶었다. auto increment 설정을 해놨기 때문이다.
+
 그래서 save 메서드 안에서 match라는 메서드를 넣어서 select를 따로 빼려고 했는데 에러가 너무 많이 떠서 가독성이 너무 떨어지고 문제를 파악하기 힘들어서(pstmt가 누구의 pstmt인지 알아보기 너무 힘들었다.) 외부에 match 메서드를 작성해서 return 값을 save의 인자값으로 넣어주려고 했는데, 역시나 에러가 많고 pstmt를 작성하기가 복잡해서 문제를 더 쪼개보기로 했다.
- 문제를 더 쪼개보자 해서 insert가 내 정신과 마음을 박살내긴 했지만 문제는 더 있다. 
+ 문제를 더 쪼개보자 해서 passengerId 받는 메서드, destinationId 받는 메서드 등으로 네 개의 메서드로 빼보려고 했는데 return 값으로 id 값을 받는데 compile 에러가 났다. 이걸 passenger_id, destination_id, starting_point_id, airline_id 이렇게 네 개를 받아야 하는데 너무 많은 에러를 해결할 자신이 없었다. 
+ticket 테이블이 외부키로 id가 아니라 String값을 받았어야 한다는 생각이 들었다. 테이블 구성 짤 때는 문제를 몰랐다. id 값을 받아도 할 수 있는 사람이 있겠지만 일단 지금의 나는 아닌 것 같아서 속상했다.
+insert가 내 정신과 마음을 박살내긴 했지만 문제는 더 있다. 
 1. insert에서 입력한 문자열값을 id값과 매칭해서 데이터를 추가할 수 있다면 update도 가능할 거 같은데 막상해보면 다른 방식이 필요하진 않을까? (passenger table이 아니라 ticket table을 update 하고 싶었다.)
 2. 왜 builder는 적용이 안 되는지(insert가 내 시간을 훔쳐갔다.)
 3. 조회 sql구문을 간소화할 수는 없는지(insert가 생각할 시간을 안 줬다.)

@@ -43,6 +43,8 @@ public class App {
 //		ticketController.deleteById(deleteNumber);
 
 //		ticketController.findAll();
+
+		System.out.println("수정");
 	}
 
 }
